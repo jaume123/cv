@@ -4,3 +4,7 @@
 node_modules
 *.log
 Thumbs.db
+generate_cv.js
+Jaime_Ferrer_CV.docx
+package.json
+package-lock.json
