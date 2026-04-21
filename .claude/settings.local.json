@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/jjferrer/Downloads/**)",
+      "Bash(pandoc --to plain Curriculum.docx)",
+      "Bash(python -c ' *)",
+      "mcp__99688d40-2971-4907-9d68-196d3033fc0d__deploy_to_vercel",
+      "Bash(vercel --version)",
+      "Bash(npm i *)",
+      "Bash(winget install *)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI:/c/Users/jjferrer/AppData/Roaming/npm\")",
+      "Bash(gh --version)"
+    ]
+  }
+}
