@@ -22,11 +22,17 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a class="nl" href="#about">Sobre mí</a></li>
-        <li><a class="nl" href="#skills">Skills</a></li>
-        <li><a class="nl" href="#experience">Experiencia</a></li>
-        <li><a class="nl" href="#education">Formación</a></li>
-        <li><a class="nl cta" href="#contact">Contacto</a></li>
+        <li><a class="nl" href="#about" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a class="nl" href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a class="nl" href="#experience" data-i18n="nav.exp">Experiencia</a></li>
+        <li><a class="nl" href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a class="nl" href="#education" data-i18n="nav.edu">Formación</a></li>
+        <li><a class="nl cta" href="#contact" data-i18n="nav.contact">Contacto</a></li>
+        <li class="lang-switch">
+          <button class="lang-btn" data-lang="es" title="Español">ES</button>
+          <button class="lang-btn" data-lang="en" title="English">EN</button>
+          <button class="lang-btn" data-lang="pl" title="Polski">PL</button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -39,11 +45,10 @@
     <div class="hero-orb hero-orb-3"></div>
 
     <div class="hero-wrap">
-      <!-- LEFT: texto -->
       <div class="hero-text">
         <div class="available-pill">
           <span class="pulse-dot"></span>
-          Disponible para trabajar
+          <span data-i18n="hero.available">Disponible para trabajar</span>
         </div>
 
         <h1 class="hero-name">
@@ -56,35 +61,31 @@
           <span id="typed"></span><span class="caret">|</span>
         </div>
 
-        <p class="hero-desc">
-          Desarrollador junior con base en Valencia. Especializado en el stack web completo —
-          desde interfaces modernas en Angular y React hasta APIs robustas con NestJS, desplegadas en la nube.
-        </p>
+        <p class="hero-desc" data-i18n="hero.desc">Desarrollador junior con base en Valencia. Especializado en el stack web completo — desde interfaces modernas en Angular y React hasta APIs robustas con NestJS y Spring Boot, desplegadas en la nube.</p>
 
         <div class="hero-btns">
-          <a href="#experience" class="btn btn-primary">Ver experiencia</a>
-          <a href="#contact" class="btn btn-ghost">Contactar &rarr;</a>
+          <a href="#experience" class="btn btn-primary" data-i18n="hero.btn1">Ver experiencia</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.btn2">Contactar →</a>
         </div>
 
         <div class="hero-stats">
           <div class="hstat">
-            <span class="hstat-n" data-to="2">0</span>+
-            <span class="hstat-l">Años exp.</span>
+            <span class="hstat-n" data-to="3">0</span>
+            <span class="hstat-l" data-i18n="hero.stat1">Proyectos reales</span>
           </div>
           <div class="hstat-div"></div>
           <div class="hstat">
             <span class="hstat-n" data-to="18">0</span>+
-            <span class="hstat-l">Tecnologías</span>
+            <span class="hstat-l" data-i18n="hero.stat2">Tecnologías</span>
           </div>
           <div class="hstat-div"></div>
           <div class="hstat">
             <span class="hstat-n" data-to="2">0</span>
-            <span class="hstat-l">Titulaciones</span>
+            <span class="hstat-l" data-i18n="hero.stat3">Titulaciones</span>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT: code card -->
       <div class="hero-code-wrap">
         <div class="code-card">
           <div class="code-bar">
@@ -97,7 +98,7 @@
   <span class="c-key">location</span><span class="c-op">:</span> <span class="c-str">'Valencia 🇪🇸'</span>,
   <span class="c-key">stack</span><span class="c-op">:</span> {
     <span class="c-key">frontend</span><span class="c-op">:</span> [<span class="c-str">'Angular'</span>, <span class="c-str">'React'</span>, <span class="c-str">'Next.js'</span>],
-    <span class="c-key">backend</span><span class="c-op">:</span>  [<span class="c-str">'NestJS'</span>, <span class="c-str">'Java'</span>, <span class="c-str">'Node'</span>],
+    <span class="c-key">backend</span><span class="c-op">:</span>  [<span class="c-str">'NestJS'</span>, <span class="c-str">'Spring'</span>, <span class="c-str">'Node'</span>],
     <span class="c-key">cloud</span><span class="c-op">:</span>    [<span class="c-str">'Azure'</span>, <span class="c-str">'Vercel'</span>, <span class="c-str">'Render'</span>],
   },
   <span class="c-key">available</span><span class="c-op">:</span> <span class="c-bool">true</span>,
@@ -108,7 +109,6 @@
 <span class="code-cursor-blink">█</span></pre>
         </div>
 
-        <!-- floating badges -->
         <div class="float-badge fb1">⚡ NestJS</div>
         <div class="float-badge fb2">☁️ Azure</div>
         <div class="float-badge fb3">⚛️ React</div>
@@ -126,25 +126,15 @@
   <section id="about" class="section">
     <div class="container">
       <header class="sec-hd" data-reveal>
-        <span class="sec-tag">// about_me</span>
-        <h2>Sobre <span class="gtext">mí</span></h2>
+        <span class="sec-tag" data-i18n="about.tag">// about_me</span>
+        <h2><span data-i18n="about.title.a">Sobre</span> <span class="gtext" data-i18n="about.title.b">mí</span></h2>
       </header>
 
       <div class="about-grid">
         <div class="about-bio" data-reveal>
-          <p>
-            Soy <strong>Jaime Juan Ferrer Haro</strong>, desarrollador de software junior con base en Valencia.
-            Acabo de completar el <strong>Grado Superior en DAM</strong> (Desarrollo de Aplicaciones Multiplataforma)
-            y cuento con experiencia real trabajando en empresas tecnológicas.
-          </p>
-          <p>
-            Me apasiona construir productos digitales modernos: desde interfaces de usuario
-            atractivas con <strong>Angular, React y Next.js</strong>, hasta APIs sólidas con
-            <strong>NestJS y Java</strong>. Siempre buscando las mejores prácticas y el código más limpio.
-          </p>
-          <p>
-            Busco un equipo donde crecer, aportar y seguir aprendiendo cada día.
-          </p>
+          <p data-i18n="about.p1">Soy <strong>Jaime Juan Ferrer Haro</strong>, desarrollador de software junior con base en Valencia. Acabo de completar el <strong>Grado Superior en DAM</strong> (Desarrollo de Aplicaciones Multiplataforma) y cuento con experiencia real trabajando en empresas tecnológicas.</p>
+          <p data-i18n="about.p2">Me apasiona construir productos digitales modernos: desde interfaces de usuario atractivas con <strong>Angular, React y Next.js</strong>, hasta APIs sólidas con <strong>NestJS, Java y Spring Boot</strong>. Siempre buscando las mejores prácticas y el código más limpio.</p>
+          <p data-i18n="about.p3">Busco un equipo donde crecer, aportar y seguir aprendiendo cada día.</p>
 
           <div class="bio-chips">
             <a href="tel:+34638151211" class="chip">
@@ -157,11 +147,11 @@
             </a>
             <span class="chip">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Valencia, España
+              <span data-i18n="about.chip.loc">Valencia, España</span>
             </span>
             <span class="chip">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-              Carnet B · Vehículo propio
+              <span data-i18n="about.chip.car">Carnet B · Vehículo propio</span>
             </span>
           </div>
         </div>
@@ -169,23 +159,23 @@
         <div class="about-cards" data-reveal>
           <div class="acard">
             <div class="acard-icon">🎓</div>
-            <h3>Formación</h3>
-            <p>Grado Superior DAM<br>+ Grado Medio SMR</p>
+            <h3 data-i18n="about.card1.t">Formación</h3>
+            <p data-i18n="about.card1.d">Grado Superior DAM<br>+ Grado Medio SMR</p>
           </div>
           <div class="acard">
             <div class="acard-icon">💼</div>
-            <h3>Experiencia</h3>
-            <p>+1 año en proyectos<br>de software real</p>
+            <h3 data-i18n="about.card2.t">Experiencia</h3>
+            <p data-i18n="about.card2.d">+1 año en proyectos<br>de software real</p>
           </div>
           <div class="acard">
             <div class="acard-icon">🌍</div>
-            <h3>Idiomas</h3>
-            <p>Español · Valenciano<br>Inglés Avanzado</p>
+            <h3 data-i18n="about.card3.t">Idiomas</h3>
+            <p data-i18n="about.card3.d">Español · Valenciano<br>Inglés Avanzado</p>
           </div>
           <div class="acard">
             <div class="acard-icon">⚡</div>
-            <h3>Disponibilidad</h3>
-            <p>Inmediata<br>Presencial o remoto</p>
+            <h3 data-i18n="about.card4.t">Disponibilidad</h3>
+            <p data-i18n="about.card4.d">Inmediata<br>Presencial o remoto</p>
           </div>
         </div>
       </div>
@@ -196,14 +186,14 @@
   <section id="skills" class="section section-alt">
     <div class="container">
       <header class="sec-hd" data-reveal>
-        <span class="sec-tag">// tech_stack</span>
-        <h2>Mis <span class="gtext">Skills</span></h2>
+        <span class="sec-tag" data-i18n="skills.tag">// tech_stack</span>
+        <h2><span data-i18n="skills.title.a">Mis</span> <span class="gtext" data-i18n="skills.title.b">Skills</span></h2>
       </header>
 
       <div class="skills-wrap">
 
         <div class="skill-cat" data-reveal>
-          <h3 class="cat-title"><span>🎨</span> Frontend</h3>
+          <h3 class="cat-title"><span>🎨</span> <span data-i18n="skills.cat1">Frontend</span></h3>
           <div class="tech-grid">
             <div class="tcard"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
             <div class="tcard"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
@@ -220,7 +210,7 @@
         </div>
 
         <div class="skill-cat" data-reveal>
-          <h3 class="cat-title"><span>⚙️</span> Backend &amp; APIs</h3>
+          <h3 class="cat-title"><span>⚙️</span> <span data-i18n="skills.cat2">Backend & APIs</span></h3>
           <div class="tech-grid">
             <div class="tcard"><i class="devicon-java-plain colored"></i><span>Java</span></div>
             <div class="tcard"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></div>
@@ -235,7 +225,7 @@
         </div>
 
         <div class="skill-cat" data-reveal>
-          <h3 class="cat-title"><span>🗄️</span> Bases de Datos</h3>
+          <h3 class="cat-title"><span>🗄️</span> <span data-i18n="skills.cat3">Bases de Datos</span></h3>
           <div class="tech-grid">
             <div class="tcard"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
             <div class="tcard"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
@@ -249,7 +239,7 @@
         </div>
 
         <div class="skill-cat" data-reveal>
-          <h3 class="cat-title"><span>☁️</span> Cloud &amp; Herramientas</h3>
+          <h3 class="cat-title"><span>☁️</span> <span data-i18n="skills.cat4">Cloud & Herramientas</span></h3>
           <div class="tech-grid">
             <div class="tcard"><i class="devicon-git-plain colored"></i><span>Git</span></div>
             <div class="tcard"><i class="devicon-github-original" style="filter:invert(1)"></i><span>GitHub</span></div>
@@ -270,9 +260,8 @@
 
       </div>
 
-      <!-- skill bars -->
       <div class="bars-wrap" data-reveal>
-        <h3 class="bars-title">Nivel de competencia</h3>
+        <h3 class="bars-title" data-i18n="skills.bars.t">Nivel de competencia</h3>
         <div class="bar-row">
           <div class="bar-lbl"><span>HTML · CSS · JavaScript</span><span class="bar-pct">85%</span></div>
           <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
@@ -305,8 +294,8 @@
   <section id="experience" class="section">
     <div class="container">
       <header class="sec-hd" data-reveal>
-        <span class="sec-tag">// work_experience</span>
-        <h2>Experiencia <span class="gtext">Laboral</span></h2>
+        <span class="sec-tag" data-i18n="exp.tag">// work_experience</span>
+        <h2><span data-i18n="exp.title.a">Experiencia</span> <span class="gtext" data-i18n="exp.title.b">Laboral</span></h2>
       </header>
 
       <div class="timeline">
@@ -316,20 +305,17 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Desarrollador de Software</h3>
-                <p class="tl-company">DAS Audio &middot; Valencia</p>
+                <h3 data-i18n="exp.1.role">Prácticas — Desarrollo de Software</h3>
+                <p class="tl-company">DAS Audio · Valencia</p>
               </div>
               <div class="tl-meta">
-                <span class="tl-date">Ene 2025 – Actualidad</span>
-                <span class="badge-current">Actual</span>
+                <span class="tl-date" data-i18n="exp.1.date">2025</span>
+                <span class="badge-current" data-i18n="exp.1.current">En curso</span>
               </div>
             </div>
-            <p class="tl-desc">
-              Desarrollo y mantenimiento de aplicaciones internas en una empresa referente mundial en sistemas de audio profesional.
-              Implementación de soluciones web modernas para optimizar flujos de trabajo internos.
-            </p>
+            <p class="tl-desc" data-i18n="exp.1.desc">Prácticas profesionales en empresa multinacional referente mundial en sistemas de audio profesional. Participación en el desarrollo de un <strong>portal web empresarial interno</strong> con stack moderno (Angular, React, TypeScript, Bootstrap) en un entorno corporativo real.</p>
             <div class="tl-tags">
-              <span>JavaScript</span><span>React</span><span>Node.js</span><span>Git</span><span>REST API</span>
+              <span>Angular</span><span>React</span><span>TypeScript</span><span>Bootstrap</span><span>Git</span>
             </div>
           </div>
         </div>
@@ -339,19 +325,16 @@
           <div class="tl-card">
             <div class="tl-head">
               <div>
-                <h3>Técnico Informático &amp; Desarrollador</h3>
-                <p class="tl-company">App Informática &middot; Ibiza</p>
+                <h3 data-i18n="exp.2.role">Prácticas — Soporte Técnico IT</h3>
+                <p class="tl-company">App Informática · Ibiza</p>
               </div>
               <div class="tl-meta">
-                <span class="tl-date">2021 · 1 año</span>
+                <span class="tl-date" data-i18n="exp.2.date">2021</span>
               </div>
             </div>
-            <p class="tl-desc">
-              Primera experiencia profesional en el sector tecnológico. Soporte técnico avanzado,
-              mantenimiento de infraestructura IT y desarrollo de soluciones informáticas a medida para clientes.
-            </p>
+            <p class="tl-desc" data-i18n="exp.2.desc">Primer contacto profesional con el sector tecnológico. <strong>Reparación de equipos informáticos, soporte técnico a clientes e instalación/configuración de software</strong>. Base sólida sobre infraestructura y mantenimiento de sistemas.</p>
             <div class="tl-tags">
-              <span>Hardware</span><span>Redes</span><span>Soporte TI</span><span>Software</span><span>Linux</span>
+              <span>Hardware</span><span>Soporte TI</span><span>Instalación SW</span><span>Windows</span><span>Linux</span>
             </div>
           </div>
         </div>
@@ -360,12 +343,75 @@
     </div>
   </section>
 
-  <!-- ========== EDUCATION ========== -->
-  <section id="education" class="section section-alt">
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section section-alt">
     <div class="container">
       <header class="sec-hd" data-reveal>
-        <span class="sec-tag">// education</span>
-        <h2>Formación <span class="gtext">Académica</span></h2>
+        <span class="sec-tag" data-i18n="proj.tag">// featured_projects</span>
+        <h2><span data-i18n="proj.title.a">Proyectos</span> <span class="gtext" data-i18n="proj.title.b">destacados</span></h2>
+        <p class="sec-sub" data-i18n="proj.sub">Proyectos reales — código publicado y aplicaciones en producción.</p>
+      </header>
+
+      <div class="proj-grid">
+
+        <article class="pcard" data-reveal>
+          <div class="pcard-head">
+            <span class="pcard-icon">🏝️</span>
+            <span class="pcard-status status-live" data-i18n="proj.live">En producción</span>
+          </div>
+          <h3 data-i18n="proj.1.t">Villas Juan Vich</h3>
+          <p class="pcard-role" data-i18n="proj.1.role">Web en producción · Cliente real</p>
+          <p class="pcard-desc" data-i18n="proj.1.desc">Sitio web corporativo en producción para negocio familiar de alquiler de villas en Ibiza. Desarrollo end-to-end y despliegue. Sitio activo recibiendo tráfico real y reservas.</p>
+          <div class="pcard-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Producción</span>
+          </div>
+          <a href="https://villasjuanvich.com/" target="_blank" rel="noopener" class="pcard-cta">
+            <span data-i18n="proj.1.cta">Ver web en vivo →</span>
+          </a>
+        </article>
+
+        <article class="pcard" data-reveal>
+          <div class="pcard-head">
+            <span class="pcard-icon">📡</span>
+            <span class="pcard-status status-public" data-i18n="proj.public">Código público</span>
+          </div>
+          <h3 data-i18n="proj.2.t">Aplicación de Escritorio NFC</h3>
+          <p class="pcard-role" data-i18n="proj.2.role">Electron + integración hardware NFC</p>
+          <p class="pcard-desc" data-i18n="proj.2.desc">Aplicación de escritorio multiplataforma desarrollada con Electron, integrada con tecnología NFC para lectura/escritura de tarjetas. Demuestra integración con hardware desde JavaScript.</p>
+          <div class="pcard-tags">
+            <span>Electron</span><span>JavaScript</span><span>NFC</span><span>Desktop</span>
+          </div>
+          <a href="https://github.com/jaume123/Aplicacion-Escritorio-Electron" target="_blank" rel="noopener" class="pcard-cta">
+            <span data-i18n="proj.2.cta">Ver en GitHub →</span>
+          </a>
+        </article>
+
+        <article class="pcard" data-reveal>
+          <div class="pcard-head">
+            <span class="pcard-icon">🏢</span>
+            <span class="pcard-status status-private" data-i18n="proj.private">Privado</span>
+          </div>
+          <h3 data-i18n="proj.3.t">Portal Web Empresarial</h3>
+          <p class="pcard-role" data-i18n="proj.3.role">Práctica DAS Audio · Repo privado</p>
+          <p class="pcard-desc" data-i18n="proj.3.desc">Portal web interno corporativo desarrollado durante mis prácticas. Stack moderno con Angular y React en frontend, TypeScript en todo el proyecto, Bootstrap para UI consistente, y arquitectura cliente-servidor con backend.</p>
+          <div class="pcard-tags">
+            <span>Angular</span><span>React</span><span>TypeScript</span><span>Bootstrap</span><span>Backend</span>
+          </div>
+          <span class="pcard-cta pcard-cta-disabled">
+            <span data-i18n="proj.3.cta">Repositorio privado</span>
+          </span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education" class="section">
+    <div class="container">
+      <header class="sec-hd" data-reveal>
+        <span class="sec-tag" data-i18n="edu.tag">// education</span>
+        <h2><span data-i18n="edu.title.a">Formación</span> <span class="gtext" data-i18n="edu.title.b">Académica</span></h2>
       </header>
 
       <div class="edu-grid">
@@ -375,12 +421,8 @@
           <span class="edu-emoji">🚀</span>
           <div class="edu-year">2023 – 2025</div>
           <h3>Grado Superior DAM</h3>
-          <p class="edu-sub">Desarrollo de Aplicaciones Multiplataforma</p>
-          <p class="edu-desc">
-            Formación avanzada en programación orientada a objetos, desarrollo web full stack,
-            bases de datos relacionales y no relacionales, y despliegue en la nube.
-            Proyecto final con tecnologías del stack moderno.
-          </p>
+          <p class="edu-sub" data-i18n="edu.1.sub">Desarrollo de Aplicaciones Multiplataforma</p>
+          <p class="edu-desc" data-i18n="edu.1.desc">Formación avanzada en programación orientada a objetos, desarrollo web full stack, bases de datos relacionales y no relacionales, y despliegue en la nube. Proyecto final con tecnologías del stack moderno.</p>
           <div class="edu-tags">
             <span>Java</span><span>Angular</span><span>SQL</span><span>REST API</span><span>Git</span>
           </div>
@@ -391,12 +433,8 @@
           <span class="edu-emoji">🔌</span>
           <div class="edu-year">2021 – 2023</div>
           <h3>Grado Medio SMR</h3>
-          <p class="edu-sub">Sistemas Microinformáticos y Redes</p>
-          <p class="edu-desc">
-            Fundamentos de hardware, arquitectura de redes, sistemas operativos Linux y Windows,
-            y administración de servidores. Base sólida para entender la infraestructura
-            sobre la que se ejecutan las aplicaciones.
-          </p>
+          <p class="edu-sub" data-i18n="edu.2.sub">Sistemas Microinformáticos y Redes</p>
+          <p class="edu-desc" data-i18n="edu.2.desc">Fundamentos de hardware, arquitectura de redes, sistemas operativos Linux y Windows, y administración de servidores. Base sólida para entender la infraestructura sobre la que se ejecutan las aplicaciones.</p>
           <div class="edu-tags">
             <span>Redes</span><span>Linux</span><span>Hardware</span><span>Servidores</span>
           </div>
@@ -407,11 +445,8 @@
           <span class="edu-emoji">📚</span>
           <div class="edu-year">2016 – 2020</div>
           <h3>ESO</h3>
-          <p class="edu-sub">IES Quarto del Rey · Valencia</p>
-          <p class="edu-desc">
-            Educación Secundaria Obligatoria. Donde comenzó el interés por la tecnología y la programación,
-            que llevó a elegir el camino de la informática como vocación profesional.
-          </p>
+          <p class="edu-sub" data-i18n="edu.3.sub">IES Quarto del Rey · Valencia</p>
+          <p class="edu-desc" data-i18n="edu.3.desc">Educación Secundaria Obligatoria. Donde comenzó el interés por la tecnología y la programación, que llevó a elegir el camino de la informática como vocación profesional.</p>
           <div class="edu-tags">
             <span>Matemáticas</span><span>Tecnología</span><span>Ciencias</span>
           </div>
@@ -425,31 +460,31 @@
   <section id="contact" class="section">
     <div class="container">
       <header class="sec-hd" data-reveal>
-        <span class="sec-tag">// get_in_touch</span>
-        <h2>Hablemos <span class="gtext">🚀</span></h2>
-        <p class="sec-sub">¿Tienes una oferta interesante o un proyecto en mente? Me encantaría escucharte.</p>
+        <span class="sec-tag" data-i18n="contact.tag">// get_in_touch</span>
+        <h2><span data-i18n="contact.title.a">Hablemos</span> <span class="gtext">🚀</span></h2>
+        <p class="sec-sub" data-i18n="contact.sub">¿Tienes una oferta interesante o un proyecto en mente? Me encantaría escucharte.</p>
       </header>
 
       <div class="contact-grid" data-reveal>
         <a href="tel:+34638151211" class="ccard">
           <span class="ccard-icon">📞</span>
-          <h3>Teléfono</h3>
+          <h3 data-i18n="contact.c1">Teléfono</h3>
           <p>+34 638 151 211</p>
         </a>
         <a href="mailto:jaume534fh@gmail.com" class="ccard">
           <span class="ccard-icon">✉️</span>
-          <h3>Email</h3>
+          <h3 data-i18n="contact.c2">Email</h3>
           <p>jaume534fh@gmail.com</p>
         </a>
         <div class="ccard">
           <span class="ccard-icon">📍</span>
-          <h3>Ubicación</h3>
-          <p>Valencia, España</p>
+          <h3 data-i18n="contact.c3">Ubicación</h3>
+          <p data-i18n="contact.c3.v">Valencia, España</p>
         </div>
       </div>
 
       <div class="contact-note" data-reveal>
-        <p>También puedes encontrarme en</p>
+        <p data-i18n="contact.note">También puedes encontrarme en</p>
         <div class="social-row">
           <a href="https://github.com/jaume123" target="_blank" rel="noopener" class="social-btn">
             <i class="devicon-github-original"></i> GitHub
@@ -466,14 +501,14 @@
   <footer>
     <div class="container">
       <p class="footer-logo"><span class="logo-bracket">&lt;</span><span class="logo-jf">JF</span><span class="logo-bracket">/&gt;</span></p>
-      <p class="footer-copy">Hecho con <span style="color:#e11d48">❤</span> por <strong>Jaime Juan Ferrer Haro</strong> &middot; 2025</p>
-      <p class="footer-tech">HTML · CSS · JavaScript Vanilla &mdash; sin frameworks</p>
+      <p class="footer-copy" data-i18n="footer.copy">Hecho con ❤ por <strong>Jaime Juan Ferrer Haro</strong> · 2025</p>
+      <p class="footer-tech" data-i18n="footer.tech">HTML · CSS · JavaScript Vanilla — sin frameworks</p>
     </div>
   </footer>
 
-  <!-- back to top -->
   <button id="btt" aria-label="Volver arriba">↑</button>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

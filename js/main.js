@@ -80,35 +80,44 @@
   frame();
 })();
 
-// ---- TYPED ANIMATION ----
+// ---- TYPED ANIMATION (i18n-aware) ----
 (function () {
   const el = document.getElementById('typed');
   if (!el) return;
-  const phrases = [
-    'Junior DAM & SMR Fullstack Developer',
+  const fallback = [
+    'Junior Fullstack Developer',
     'Angular & React Dev',
-    'Backend con NestJS & Java',
+    'Backend: NestJS, Java & Spring',
     'Cloud: Azure · Vercel · Render',
   ];
-  let pi = 0, ci = 0, del = false;
+  const phrases = () => (window.__typedPhrases && window.__typedPhrases.length) ? window.__typedPhrases : fallback;
+  let pi = 0, ci = 0, del = false, scheduled = null;
 
   function tick() {
-    const phrase = phrases[pi];
-    el.textContent = del
-      ? phrase.substring(0, --ci)
-      : phrase.substring(0, ++ci);
+    const list = phrases();
+    if (pi >= list.length) pi = 0;
+    const phrase = list[pi];
+    el.textContent = del ? phrase.substring(0, --ci) : phrase.substring(0, ++ci);
 
     if (!del && ci === phrase.length) {
-      setTimeout(() => { del = true; }, 2200);
-      setTimeout(tick, 2400);
+      scheduled = setTimeout(() => { del = true; tick(); }, 2200);
     } else if (del && ci === 0) {
       del = false;
-      pi = (pi + 1) % phrases.length;
-      setTimeout(tick, 300);
+      pi = (pi + 1) % list.length;
+      scheduled = setTimeout(tick, 300);
     } else {
-      setTimeout(tick, del ? 45 : 75);
+      scheduled = setTimeout(tick, del ? 45 : 75);
     }
   }
+
+  // restart typing on language change so the new phrase array is picked up cleanly
+  window.addEventListener('i18n-change', () => {
+    if (scheduled) clearTimeout(scheduled);
+    pi = 0; ci = 0; del = false;
+    el.textContent = '';
+    scheduled = setTimeout(tick, 200);
+  });
+
   setTimeout(tick, 600);
 })();
 
